@@ -1,31 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body {
-    background-color: #e6b4e6; 
-    color: #000000; 
-    font-family: 'Arial', sans-serif;
-  }
+    background-color: #ddd7d7;
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    height: 100vh;  /* Ensure the body takes full viewport height */
+    margin: 0;  /* Remove default body margin */
+}
 
-  .main-heading {
-    color: #000000; 
-    text-align: center;
-    margin-top: 50px;
-    font-size: 3rem;
-  }
+.d-flex {
+    display: flex;
+}
 
-  .lead {
-    font-size: 1.25rem;
-    color: #000000; 
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .container {
+.justify-content-center {
+    justify-content: center;  /* Horizontally center the container */
+}
+
+.align-items-center {
+    align-items: center;  /* Vertically center the container */
+}
+
+.min-vh-100 {
+    min-height: 100vh;  /* Ensure the container takes at least 100% of the viewport height */
+}
+
+.white-container {
+    background-color: #fff;  /* White background for the container */
     padding: 20px;
-    background-color: #ececec; 
-    border-radius: 8px; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-    margin-top: 30px;
-  }
-  
-  
- 
+    border-radius: 8px;  /* Optional: round corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: subtle shadow for the container */
+    width: 85%;  /* Set a max-width for the white container, adjust as needed */
+    max-width: 1200px;  /* Optional: Set a max-width for better responsiveness */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Align all content from the top */
+    height: 80vh;  /* Give the container a fixed height (adjustable) */
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;  /* Align the items at the top of the container */
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.top-item {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.first-text {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 30px; /* Adjust the space from the top navigation */
+}
+
+.second-text {
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 20px;  /* Adjust the space from the heading */
+}
