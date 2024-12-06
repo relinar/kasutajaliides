@@ -8,6 +8,14 @@ body {
     margin: 0;  /* Remove default body margin */
 }
 
+
+.domain-container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    
+}
+
 .d-flex {
     display: flex;
 }
@@ -29,8 +37,8 @@ body {
     padding: 20px;
     border-radius: 8px;  /* Optional: round corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: subtle shadow for the container */
-    width: 85%;  /* Set a max-width for the white container, adjust as needed */
-    max-width: 1200px;  /* Optional: Set a max-width for better responsiveness */
+    width: 90%;  /* Set a max-width for the white container, adjust as needed */
+    max-width: 1500px;  /* Optional: Set a max-width for better responsiveness */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;  /* Align all content from the top */
@@ -47,19 +55,132 @@ body {
 
 .top-item {
     flex: 1;
-    text-align: center;
-    font-size: 14px;
+    text-align:center;
+    font-size: 12px;
     color: #333;
 }
 
 .first-text {
     font-weight: bold;
     font-style: italic;
-    margin-top: 30px; /* Adjust the space from the top navigation */
+    margin-top: 150px; /* Adjust the space from the top navigation */
+    text-align: center;
 }
 
 .second-text {
     font-weight: normal;
     font-style: normal;
     margin-top: 20px;  /* Adjust the space from the heading */
+    text-align: center;
+}
+
+.third-text {
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: auto;  /* Adjust the space from the heading */
+    text-align: center;
+}
+
+/* Modern Animated Button Styles */
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: rgb(0, 35, 133);
+    box-shadow: 0 0 0 2px rgb(126, 193, 255);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: rgb(0, 109, 172);
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+    right: 16px;
+}
+
+.animated-button .arr-2 {
+    left: -25%;
+}
+
+.animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 194, 253);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+    right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+    left: 16px;
+}
+
+.animated-button:hover .text {
+    transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+    fill: #212121;
+}
+
+.animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px rgba(3, 0, 156, 0.438);
+}
+
+.animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+    text-align: center;
+}
+
+/* Styling for top navigation links */
+.top-nav .nav-link {
+    color: black;  /* Make the link color black */
+    font-size: 14px;  /* Optional: adjust font size */
+}
+
+.top-nav .nav-link:hover {
+    color: #333;  /* Darker black or any shade you like */
+}
+
+.top-nav .nav-link.active {
+    color: #000;  /* Black for active state */
 }
