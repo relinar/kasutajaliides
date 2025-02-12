@@ -138,7 +138,33 @@
   <script>
     document.getElementById('companyCheckbox').addEventListener('change', function () {
       document.getElementById('companyFields').style.display = this.checked ? 'block' : 'none';
-    });
+      document.addEventListener('DOMContentLoaded', function () {
+    const orderSummary = document.querySelector('.order-summary');
+
+    // Get selected domains from localStorage
+    const selectedDomains = JSON.parse(localStorage.getItem('selectedDomains')) || [];
+
+    if (selectedDomains.length > 0) {
+        // Assuming only one domain should be displayed
+        const { name, years, price } = selectedDomains[0]; 
+
+        // Convert price to float and calculate VAT
+        const priceNumber = parseFloat(price.replace('€', '').replace(',', '.')) || 0;
+        const priceWithVAT = (priceNumber * 1.22).toFixed(2);
+
+        // Update order summary content dynamically
+        orderSummary.innerHTML = `
+            <h5>Tellimus</h5>
+            <p><strong>${name}</strong></p>
+            <p>Registreerimine (${years} aasta) ${price} + km</p>
+            <h4>${price} + km</h4>
+            <p>(${priceWithVAT}€)</p>
+        `;
+    }
+});
+
+});
+
   </script>
 </body>
 
