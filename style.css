@@ -1,31 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* General styles */
-html, body {
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    padding: 0;
-    margin: 0;
-}
-
-/* Main container */
-.white-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    min-height: 85vh; /* Ensures content fits within smaller screens */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Keeps spacing balanced */
-    overflow-y: auto; /* Allows scrolling inside the container */
+body {
+    background-color: #ddd7d7;
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    height: 100vh;  /* Ensure the body takes full viewport height */
+    margin: 0;  /* Remove default body margin */
 }
 
 
@@ -52,6 +32,18 @@ html, body {
     min-height: 100vh;  /* Ensure the container takes at least 100% of the viewport height */
 }
 
+.white-container {
+    background-color: #fff;  /* White background for the container */
+    padding: 20px;
+    border-radius: 8px;  /* Optional: round corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: subtle shadow for the container */
+    width: 90%;  /* Set a max-width for the white container, adjust as needed */
+    max-width: 1500px;  /* Optional: Set a max-width for better responsiveness */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Align all content from the top */
+    height: 80vh;  /* Give the container a fixed height (adjustable) */
+}
 
 .top-nav {
     display: flex;
@@ -110,7 +102,7 @@ html, body {
 }
 
 .animated-button svg {
-    position: relative;
+    position: absolute;
     width: 24px;
     fill: rgb(0, 109, 172);
     z-index: 9;
@@ -126,7 +118,7 @@ html, body {
 }
 
 .animated-button .circle {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -193,3 +185,8 @@ html, body {
     color: #000;  /* Black for active state */
 }
 
+@media screen and (width: 300%) {
+    div.example {
+      display: none;
+    }
+  }  

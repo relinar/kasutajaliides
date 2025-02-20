@@ -8,38 +8,79 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Ensure the container doesn't overflow */
+    .container {
+      max-width: 100%;  /* Ensure the container takes up full width */
+      width: 100%;      /* Keeps the width responsive */
+      box-sizing: border-box;  /* Ensures padding is included in width */
+      overflow: hidden; /* Prevent overflow of content */
+    }
+
+    /* Ensure text inside the container wraps correctly and doesn't overflow */
+    .text-wrap {
+      word-wrap: break-word;     /* Breaks long words if needed */
+      overflow-wrap: break-word; /* Forces wrapping */
+      word-break: break-word;    /* Ensures words break if necessary */
+      white-space: normal;       /* Prevents horizontal scrolling and wraps text */
+    }
+
+    /* Additional styling for overall page structure */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-light"> <!-- Background color for the page -->
   <div class="d-flex justify-content-center align-items-center min-vh-100">
-    <div class="container white-container">
-      <!-- Top navigation container -->
-      <ul class="top-nav nav">
-        <li class="nav-item"><a href="#" class="nav-link">(+372)6886886</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">ABI</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">DOMEENID</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">STAATUS</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">KODULEHT JA E-POST</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">SERVERID</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">TURVALISUS</a></li>
-      </ul>
-
-      <!-- Main heading and paragraph -->
-      <h1 class="main-heading first-text">Domeeni registreerimine</h1>
-      <p class="lead second-text">Domeeni otsing aitab leida vaba internetiaadressi – meie valikus on .ee, .eu, .com,
-        enamik Euroopa riike ja uued tippdomeenid, kokku üle 360 võimaluse</p>
-
-      <!-- Centered Modern Animated Button with Link -->
-      <div class="domain-container">
-        <a href="teineleht.html">
-          <button class="animated-button">
-            <span class="text">Otsi Domeeni!</span>
-            <span class="circle"></span>
-          </button>
-        </a>
+    <div class="container white-container p-4">
+      <div class="row">
+        <!-- Top navigation container -->
+        <div class="col-12">
+          <ul class="top-nav nav d-flex justify-content-center">
+            <li class="nav-item"><a href="#" class="nav-link">(+372)6886886</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">ABI</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">DOMEENID</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">STAATUS</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">KODULEHT JA E-POST</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">SERVERID</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">TURVALISUS</a></li>
+          </ul>
+        </div>
       </div>
 
-      <p class="lead third-text">Soovid olemasoleva domeeni meile kolida või korraldada domeeni omaniku vahetust?</p>
+      <div class="row">
+        <!-- Main heading and paragraph -->
+        <div class="col-12">
+          <h1 class="main-heading first-text text-center">Domeeni registreerimine</h1>
+          <p class="lead second-text text-center text-wrap">Domeeni otsing aitab leida vaba internetiaadressi – meie valikus on .ee, .eu, .com,
+            enamik Euroopa riike ja uued tippdomeenid, kokku üle 360 võimaluse</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <!-- Centered Modern Animated Button with Link -->
+        <div class="col-auto">
+          <div class="domain-container text-center">
+            <a href="teineleht.html">
+              <button class="animated-button">
+                <span class="text">Otsi Domeeni!</span>
+                <span class="circle"></span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Additional text paragraph -->
+        <div class="col-12">
+          <p class="lead third-text text-center text-wrap">Soovid olemasoleva domeeni meile kolida või korraldada domeeni omaniku vahetust?</p>
+        </div>
+      </div>
     </div>
   </div>
 
