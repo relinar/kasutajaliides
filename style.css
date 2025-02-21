@@ -4,49 +4,24 @@ body {
     background-color: #ddd7d7;
     color: #000000;
     font-family: "Inter", sans-serif;
-    height: 100vh;  /* Ensure the body takes full viewport height */
+    min-height: 100vh;  /* Ensure the body takes full viewport height */
     margin: 0;  /* Remove default body margin */
+    padding: 0;
+  
 }
 
 
-.domain-container {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    
-}
-
-.d-flex {
-    display: flex;
-}
-
-.justify-content-center {
-    justify-content: center;  /* Horizontally center the container */
-}
-
-.align-items-center {
-    align-items: center;  /* Vertically center the container */
-}
-
-.min-vh-100 {
-    min-height: 100vh;  /* Ensure the container takes at least 100% of the viewport height */
-}
 
 .white-container {
     background-color: #fff;  /* White background for the container */
     padding: 20px;
     border-radius: 8px;  /* Optional: round corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: subtle shadow for the container */
-    width: 90%;  /* Set a max-width for the white container, adjust as needed */
-    max-width: 1500px;  /* Optional: Set a max-width for better responsiveness */
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;  /* Align all content from the top */
-    height: 80vh;  /* Give the container a fixed height (adjustable) */
 }
 
 .top-nav {
-    display: flex;
     justify-content: space-between;
     align-items: flex-start;  /* Align the items at the top of the container */
     padding-bottom: 15px;
@@ -63,14 +38,12 @@ body {
 .first-text {
     font-weight: bold;
     font-style: italic;
-    margin-top: 150px; /* Adjust the space from the top navigation */
     text-align: center;
 }
 
 .second-text {
     font-weight: normal;
     font-style: normal;
-    margin-top: 20px;  /* Adjust the space from the heading */
     text-align: center;
 }
 
@@ -84,7 +57,6 @@ body {
 /* Modern Animated Button Styles */
 .animated-button {
     position: relative;
-    display: flex;
     align-items: center;
     gap: 4px;
     padding: 16px 36px;
@@ -122,7 +94,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 20px;
     height: 20px;
     background-color: rgb(0, 194, 253);
     border-radius: 50%;
@@ -165,7 +136,6 @@ body {
 }
 
 .animated-button:hover .circle {
-    width: 220px;
     height: 220px;
     opacity: 1;
     text-align: center;
@@ -190,3 +160,178 @@ body {
       display: none;
     }
   }  
+
+ 
+  /* Ensure text inside the container wraps correctly and doesn't overflow */
+  .text-wrap {
+    word-wrap: break-word;     /* Breaks long words if needed */
+    overflow-wrap: break-word; /* Forces wrapping */
+    word-break: break-word;    /* Ensures words break if necessary */
+    white-space: normal;       /* Prevents horizontal scrolling and wraps text */
+  }
+
+ 
+  .step-container {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .step {
+    text-align: center;
+    flex: 1;
+  }
+
+  .step .circle {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #6c757d; /* Default gray color */
+    color: white;
+    font-weight: bold;
+  }
+
+  .step:nth-child(1) .circle {
+    background-color: #198754; /* Green color for OTSI */
+  }
+
+  .step .text {
+    font-weight: bold;
+  }
+
+  .search-container {
+    text-align: center;
+  }
+
+  .domain-options {
+    align-self: center;
+  }
+
+  .domain-option {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .domain-option.selected {
+    background-color: #198754;
+    color: white;
+  }
+
+  .white-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .outside-buttons {
+ 
+    justify-content: space-between;
+  }
+
+  .step-container {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .step {
+    text-align: center;
+    flex: 1;
+  }
+
+  .step .circle {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #6c757d;
+    color: white;
+    font-weight: bold;
+  }
+
+  .step:nth-child(2) .circle {
+    background-color: #198754;
+  }
+
+  .step .text {
+    font-weight: bold;
+  }
+
+  .outside-buttons {
+    justify-content: space-between;
+  }
+
+  .content-wrapper {
+    justify-content: space-between;
+  }
+
+  .form-container {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .order-summary {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+ 
+
+  .steps {
+    justify-content: space-between;
+    padding-bottom: 40px; /* Moves steps higher */
+  }
+  .step {
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+  }
+  .circle {
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #6c757d;
+    color: white;
+  }
+  .completed {
+    background-color: #28a745;
+  }
+  .confirmation-box {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .footer-links {
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Make the selected radio button highlight the row */
+.domain-option input[type="radio"]:checked + span {
+    font-weight: bold;
+    color: green;
+  }
+  
+  /* Enable "Järgmine leht" button when a radio is selected */
+  input[type="radio"]:checked ~ .outside-buttons #next-page-btn {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  /* Initially disabled "Järgmine leht" button */
+  #next-page-btn {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
